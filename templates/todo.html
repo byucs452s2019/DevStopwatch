@@ -1,0 +1,32 @@
+{% extends "template.html" %}
+
+{% block head %}
+	<title>Developer's Stopwatch: Todos</title>
+	<style>
+		#todo {
+			border: 1px solid rgba(0,0,0,0.4);
+			padding: 5px;
+			width: 50%;
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+{% endblock %}
+
+{% block content %}
+	<div id="todo">
+	    <h3>To Implement</h3>
+	    <ul>
+	      <li>log in</li>
+	      <li>create project</li>
+	      <li>join project</li>
+	      <li>log time
+	        <ul>
+	          <li>with language</li>
+	          <li>on project</li>
+	        </ul>
+	      </li>
+	    </ul>
+	</div>
+{% endblock %}

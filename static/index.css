@@ -1,0 +1,31 @@
+
+div#main {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+#todo {
+	display: none;
+    border: 1px solid black;
+    padding: 0 10px;
+    float: right;
+    display: inline-block;
+    background: rgba(0,0,0,0.2);
+}
+
+#title {
+    text-align: center;
+}
+
+#clock {
+	float: left;
+}
+
+#stopwatch-timer {
+	width: 200px;
+	height: 50px;
+	font-size: 30px;
+	border: 1px solid black;
+	text-align: center;
+}

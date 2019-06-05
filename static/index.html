@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+    </head>
+    <body>
+        <!-- Top header bar -->
+        <div id="title">
+            <h1>Developer's Stopwatch</h1>
+        </div>
+
+        <div id="main">
+
+          <div id="clock">
+            <h3>stopwatch</h3>
+            <div id="stopwatch-timer">0:00</div>
+            <button class="btn btn-success btn-md" type="button">start</button>
+            <button class="btn btn-danger" type="button">stop</button>
+          </div>
+
+          <!-- <div id="todo">
+              <h3>To Implement</h3>
+              <ul>
+                <li>log in</li>
+                <li>create project</li>
+                <li>join project</li>
+                <li>log time
+                  <ul>
+                    <li>with language</li>
+                    <li>on project</li>
+                  </ul>
+                </li>
+              </ul>
+          </div> -->
+          
+        </div>
+
+        
+        
+        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+          var time = 0;
+          var stop = false;
+
+          $('#clock .btn.btn-success').on('click', function() {
+            console.log("starting stopwatch");
+            time = 0;
+            stop = false;
+            $('#stopwatch-timer').text('0:00');
+            setTimeout(updateTime, 1000);
+          });
+
+          $('#clock .btn.btn-danger').on('click', function() {
+            console.log('stopping stopwatch');
+            stop = true;
+          })
+
+          function updateTime() {
+            if (stop) {return;}
+            time = time + 1;
+            var min = Math.floor(time / 60);
+            var sec = time % 60;
+            $('#stopwatch-timer').text(min + ":" + (sec < 10 ? "0" : "") + sec);
+            console.log(time);
+            setTimeout(updateTime, 1000);
+            return;
+          }
+        </script>
+    </body>
+</html>

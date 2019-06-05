@@ -1,47 +1,5 @@
 # DevStopwatch Project Schema
 
----
-
-##### Assignment Description
-
-This will be an individual assignment.
-
-It should consist of a link to the schema produced for your project as a team effort, as stored in GitHub, along with a personal statement of what you contributed, and any personal comments or questions about it.
-
-A schema must be a textual representation and commentary, including the following elements:
-
-* the name of each table\*
-* brief explanation of each table name
-* what kind of entity each table represents
-* how each table relates to other entities/tables
-* evidence of normalization
-* all column names given\*
-* key columns identified\*
-* any foreign keys identified\*
-* brief explanation of column names present
-* The starred\* portions of the above might look something like this:
-  
-  ```
-  Employee (EmployeeID, EmployeeName, EmployeeAddress, EmployeePhone, PositionID, LocationID)
-  Foreign Key PositionID references Position
-  Foreign Key LocationID references Location
-  Position (PositionID, PositionTitle, EducationRequired)
-  Location (LocationID, City, State, LocationPhone) 
-  ```
-  
-  So, the format for each table is
-  
-  ```
-  TableName (Column1Name, ... ColumnkName)
-  Foreign Key ColumnjName references TablemName
-  ```
-  
-  repeated for each table (with foreign keys listed when there are some)
-
----
-
-##### DevStopwatch Schema
-
 ```
 User (_UserID_, Username)
 
@@ -54,7 +12,7 @@ ProjectMember (_ProjectID_, _UserID_)
 Foreign Key ProjectID references Project
 Foreign Key UserID references User
 
-TimeLog (_UserID_, _LogID_, ProjectID, LanguageID, timeLogged)
+TimeLog (_UserID_, _LogID_, ProjectID, LanguageID, TimeLogged)
 Foreign Key UserID references User
 Foreign Key ProjectID references Project
 Foreign Key LanguageID references Language

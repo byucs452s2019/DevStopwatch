@@ -1,0 +1,65 @@
+
+
+/*********************************************************/
+/* fonts, resources, and values */
+
+:root {
+	--header-height: 100px;
+	--footer-height: 100px;
+	--body-margin: 100px;
+}
+
+@font-face {
+	font-family: 'GoudyTwenty';
+	src: url('/res/fonts/GoudyTwenty.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'GoudyOldStyle';
+	src: url('/res/fonts/Goudy Old Style-Regular.ttf') format('truetype');
+}
+
+
+
+/*********************************************************/
+/* styles */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* basic page areas */
+
+div.template-block {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: absolute;
+}
+
+#header {
+	background-color: red;
+	top: 0;
+	left: var(--body-margin);
+	right: var(--body-margin);
+	height: var(--header-height);
+}
+
+
+#main {
+	background-color: green;
+	top: var(--header-height);
+	left: var(--body-margin);
+	right: var(--body-margin);
+	bottom: var(--footer-height);
+}
+
+
+#footer {
+	background-color: blue;
+	left: var(--body-margin);
+	right: var(--body-margin);
+	bottom: 0;
+	height: var(--footer-height);
+}
